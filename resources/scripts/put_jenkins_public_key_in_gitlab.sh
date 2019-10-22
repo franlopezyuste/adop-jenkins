@@ -18,6 +18,6 @@ if [ -z "$PUBLIC_KEY" ]
 then
       echo "========= [PUBLIC KEY COPYING SCRIPT] SCRIPT FAILED. Could not find Jenkins's public key at /var/jenkins_home/userContent/id_rsa.pub ========="
 else
-      curl -H "Private-Token: ${PRIVATE_TOKEN}" -X POST http://gitlab/gitlab/api/v4/user/keys --data "title=$PUBLIC_KEY_NAME" --data-urlencode "key=$PUBLIC_KEY"
+      curl -H "Private-Token: ${PRIVATE_TOKEN}" -X POST http://${GITLAB_HOST}/gitlab/api/v4/user/keys --data "title=$PUBLIC_KEY_NAME" --data-urlencode "key=$PUBLIC_KEY"
 fi
 

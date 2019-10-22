@@ -85,7 +85,7 @@ scm.protocol=http
 scm.port=${GITLAB_PORT}
 scm.host=${host}
 scm.context=${context}
-scm.url=http://gitlab/gitlab/
+scm.url=http://${GITLAB_HOST}/gitlab/
 EOF
   ;;
 *)
